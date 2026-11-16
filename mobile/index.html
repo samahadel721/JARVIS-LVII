@@ -1,0 +1,10 @@
+<!doctype html><html dir="rtl" lang="ar"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JARVIS Mobile</title>
+<style>body{font-family:system-ui;background:#0f172a;color:#e2e8f0;padding:20px} .card{background:#1e293b;padding:16px;border-radius:12px;margin:12px 0} button{background:#6366f1;color:white;border:none;padding:10px 16px;border-radius:8px;cursor:pointer} input{padding:8px;border-radius:8px;border:1px solid #334155;width:100%;margin:6px 0}</style>
+<h1>📱 JARVIS Mobile — LVII</h1>
+<div class="card"><h3>اقتران</h3><input id="code" placeholder="رمز 8 أحرف"><button onclick="pair()">اقتران</button><div id="pairOut"></div></div>
+<div class="card"><h3>مهمة جديدة</h3><input id="goal" placeholder="ابحث عن ... ثم لخص"><button onclick="createTask()">إنشاء</button><div id="taskOut"></div></div>
+<div class="card"><a href="/api/health" target="_blank">/api/health</a> — docs/mobile_api.md للتوثيق الكامل</div>
+<script>
+async function pair(){const code=document.getElementById('code').value;const r=await fetch('/api/auth/pair',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,device_name:'Phone'})});document.getElementById('pairOut').innerText=await r.text()}
+async function createTask(){const goal=document.getElementById('goal').value;const r=await fetch('/api/tasks',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({goal})});document.getElementById('taskOut').innerText=await r.text()}
+</script>
