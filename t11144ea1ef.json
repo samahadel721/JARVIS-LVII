@@ -1,0 +1,36 @@
+{
+ "id": "t11144ea1ef",
+ "agent": "general",
+ "title": "[AGI] ابنِ نظام حجز مواعيد بسيط — خطوة 1/5: حلّل: ابنِ نظام حجز موا…",
+ "task": "[AGI] ابنِ نظام حجز مواعيد بسيط — خطوة 1/5: حلّل: ابنِ نظام حجز مواعيد بسيط",
+ "origin": "desk",
+ "deliver": "voice",
+ "status": "queued",
+ "created": 1794689927.332975,
+ "started": 0.0,
+ "finished": 0.0,
+ "not_before": 0.0,
+ "budget": {
+  "minutes": 15,
+  "rounds": 40
+ },
+ "used": {
+  "rounds": 0,
+  "seconds": 0.0
+ },
+ "attempts": 0,
+ "quota_until": 0.0,
+ "wrap_up": false,
+ "notes_in": [],
+ "events": [
+  {
+   "t": 1794689927.3332453,
+   "kind": "state",
+   "text": "queued"
+  }
+ ],
+ "files": [],
+ "result": "",
+ "report": "",
+ "error": ""
+}
